@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS concepts</title>
+    <style>
+        body{
+            margin: 1.2em;
+            border: 2px dashed black;
+            padding: 2px;
+        }
+        #main{
+            color :goldenrod;
+            font-size: 3em;
+            padding-left: 28%;
+            text-transform: capitalize;
+        
+        }
+        .heading{
+            color:crimson;
+        }
+        .para{
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        .points{
+            color:black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+            
+        }
+        table{
+            background-color: darkgreen;
+            text-align: center;
+            position: relative;;
+            left: 40%;
+            
+        }
+        tbody:hover{
+            background-color: rgb(200,255,100);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        h1{
+            background-color:blue;
+            margin: 0mm;
+        }
+        body{
+            background-image: url("https://imgc.artprintimages.com/img/print/africa-namibia-abstract-of-heat-distorting-grassy-plain_u-l-prqc250.jpg?h=550&p=0&w=550&background=fbfbfb");
+            background-repeat:repeat;
+        }
+        a{
+            color:rgb(100,100,255);
+            text-decoration: none;
+        }
+        u{
+            font-style:oblique;
+        }
+        p:nth-of-type(1):first-letter{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        li{
+            list-style-type:circle;
+        }
+    </style>
+    <script type="text/javascript" src="../javascript/helloworld.js"></script>
+</head>
+<body>
+    <h1 id="main">Cascading style sheets(CSS)</h1>
+    <hr />
+    <table border="5px">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td><a href="#types">Types of CSS styling</a></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td><a href="#selector">Types of Selectors</a></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td><a href="#combinator">Types of combinator</a></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td><a href="#inheritance">Inheritance in css</a></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td><a href="#cascade">Priority in cascades</a></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td><a href="#Types">Types of style in css</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 id="types" class="heading"><b>Types of CSS styling</b></h3>
+    <p class="para">CSS or cascading style sheet is used for styling a HTML page.Styling a page can be done by three types- <br />
+    <ol class="points">
+        <li><u>Inline styling</u>- When the stling is done within the tags using the 'style' attribute then it is called inline styling.It is the most least preferred type</li>
+        <li><u>Embedded styling</u>- When the stling is done by "style" tag in the head of HTML and using tags,id and classes for targetting then it is embedded styling.It is recommended for a single webpage.</li>
+        <li><u>External styling</u>- When the styling is done in another css page and use "link" tag in the head for linking the page with the HTML page.'rel' attribule is used for the relationship b/w the two pages and 'href' attribute is used for the file path.It is the most preferrable type.</li>
+    </ol></p>
+
+    <h3 id="selector" class="heading">Types of selectors</h3>
+    <p class="para">
+        Selectors are used for targeting a specific element in the webpage.There are many types of selectors.Here is the list-
+        <ol class="points">
+            <li><u>Type selectors</u>-While targeting when we use html tags then it is called type selector.Eg- using 'p' in "style" tag target all the paragraph</li>
+            <li><u>ID selector</u>-While targeting when the id of the element is used it is called ID selector.Eg-using '#idname' in "style" tag target the element of that id.</li>
+            <li><u>Class selector</u>-While targeting when we use class of the elements then it is called class selector.Eg-using '.classname' in "style" tag target the elements of the same class.</li>
+            <li><u>Attribute selector</u>-While targeting when we want to target the elements with a particular attribute then it is called attribute selector.We use square brackets for attribute selectors.Eg-'[href]' in style tag for targeting the same attributes.</li>
+            <li><u>Combination of tag and attribute selector</u>-When we want to target the attributes of a specific tag not all the tags of same attribute then it is Combination of tag and attribute selector.Eg-'a[href]' in style tag targets href attribute of anchor tag only</li>
+            <li><u>Combination of value and attribute selector</u>-When we want to target a attributeof a specific url or location not all attribute then it is Combination of value and attribute selector.Eg-'a[href="https://www.someurl.com"]' or '[href="https://www.someurl.com"]' in style tag targets the attribute with someurl link .</li>
+            <li><u>Pseudo class selector</u>-When we want to target a special state of the elememts then we use pseudo class element.It can be the first letter of each para or first letter of each para.Pseudo class is specified using colon.Eg-':first-line' or ': first-letter' or 'p: first-letter' for targeting every first line , every first-letter and first letter of each para respectively.</li>
+            <li><u>Universal selector</u>-When we want to select all the elements in the webpage then we use universal selector.It is denoted by "*".Eg-'*{border;}' for border in every element.</li>
+            <li><u>Hover pseudo class</u>-If want to see a change whenever the mouse points it then we use hover pseudo class.Eg- if we want to change all the achor tag background to other color whenever the mouse point it then 'a:hover{color} .</li>
+            <li><u>Link,Visited and Active pseudo class</u>-When we want to customize only unvisited link then we use link pseudo class but when we want to customize only visited link then we use visited pseudo class.When the link is unvisited or its address is not in the browser then the link pseudo class works but whenever we visit it then the visited pseudo class works.Both are mainly for anchor tags.Eg-'a:link{color} and 'a:visited{color} <br>When we want to customize the element whenever the mouse button is clicked on it then we use active pseudo class.Eg-'p:active{color}'. 
+            <br>*If we use hover ,link ,active and visited on a same link then it has to be in the order which is- link-visited-hover-active(L-V-H-A). </li>
+            <li><u>Structural pseudo class</u>-This is a type of pseudo class which helps to target using the relationship of the webpage.Eg-':first-child' targets the first child in the HTML page, 'p:second-child' targets the second child with pare tag. <br>*'p:first-child' targets all the first child with para tag but 'p :first-child' targets the first child of the para tag i.e within the para tag. <br> ':nth-child(2)' will target second child of every parent(or the defined one like 'p:nth-child(2) will target only the second child of para type.'). <br>':nth-of-type(2)' will target second element of the same type.</li>
+        </ol>
+    </p>
+
+    <h3 id="combinator" class="heading">Types of combinators</h3>
+    <p class="para">
+        Css can contain more than one selectors. Combinator is something which shows the relationship between the selectors.The types of combinators are-
+        <ol class="points">
+            <li><u>Descendent selector</u>-The descendant is a ancestor-descendent combinator which combines all the selected elements of a specified element.It is denoted by a 'space' .Eg- 'div p{color}' here all the descendent para tag under the div tag is selected.</li>
+            <li><u>Child selector</u>-The child selector is a parent-child combinator which combines only the child element of the selected element.It is denoted by '>'.Eg- 'p > a{color}' here only the child anchor tag under the para tag is selected</li>
+            <li><u>Adjacent sibling selector</u>-This combinator combined only the adjacent or immediately after siblings of the element.It is denoted by '+'.Eg- 'div + p' selects al the para immedately adjacent to the div tag.</li>
+            <li><u>General sibling selector</u>-This combinator combines all the specified siblings of the element.It is denoted by '~'.Eg- 'div ~ p' selects para tags which are also siblings of div tag.</li>
+            <li><u>No space</u>-This is a simple combinator which combine the selectors without giving space b/w them.Eg- 'p.x' selects the class x in para tags.</li>
+        </ol>
+    </p>
+
+    <h3 id="inheritance" class="heading">Inheritance in css</h3>
+    <p class="para">The style of the parent is applied to the child by default if there is no style in the child.This is called inheritance</p>
+
+    <h3 class="heading" id="cascade">Priority of cascades</h3>
+    <p class="para">Priority order of styling are mainly top to bottom i.e. as browser reads from top to bottom so the bottom element will be permanently applied.But if we use inline styling then it will get highest priority and will be applied permanently.</p>
+    <p class="para">Priority order of selectors are different.Between type selector, class selector and id selector, id selector has more priority then class and then type. This is also called specificity. </p>
+    <p class="para">For more comple combined selectors more the selector will be specific with the targeted element more it will get priority.Specificity is calculated by the browser by- <br>(a,b,c,d)-Where 'a' depends on the type styling i.e. a=1 if it is inline styling otherwise a=0 for both embedded styling and external styling. 'b' depends on the id i.e if id is used in selectors then b=no of id selector used otherwise 0. 'c' is used for class i.e. if class selector is used then c=no of class selector used including pseudo classes otherwise 0. 'd' is used for type i.e. if type selector is used then d=no of type selector used otherwise 0</p>
+
+    <h3 id="Types" class="heading">Types of style in css</h3>
+    <p class="para">
+        <ul class="points">
+            <li><u>Color</u>-Color attribute is used for coloring the targeted element.There are many defaut colors as well as color can be selected by 'rgb' value between 0 to 255 for red,green and blue.Also the background color can be changed using 'background-color' attribute/li>
+            <li><u>Opacity</u>-Opacity attribute is used for simulate the transparency of the element.It can also be set with the color attribute by 'rgba' as it will set both opacity and color.The value varies from 0 to 1 where 0 is full transparent and 1 is full opaque.</li>
+            <li><u>Width</u>-It controls the width of the body.It is used both relatively(percentage) and absolute value.We can also use 'max-width' and 'min-width' which will set the max and min width of the body'</li>
+            <li><u>Padding</u>-Padding is the spaace between the body and the border.It can be set using only 'padding' attribute which will givw same value to every side and also give different value by this way 'padding-top', 'padding-right', 'padding-bottom', and 'paddding-left'.</li>
+            <li><u>Border</u>-Border is set by 'border' attribute where we have to give width,type and color of the border in sequence.This can also be given seperately and also the borders of different directions can be given seperately just like padding.Also styles can be given by 'border-styles' attribute , '-moz-border-image' , '-moz-box-shadow' 'border-radius' etc.</li>
+            <li><u>Margins</u>-Margins is given using 'margin' attribute. This can also be used seperately just like padding</li>
+            <li><u>Background</u>-Color can be given in background by 'background-color' attribute.Backgroud can also set as a image by 'background-image' attribute and giving the url in 'url' attribute under it. To set the size of the image in background we use 'background-size' attribute.Many times the background image does not set in the area so we use 'background-repeate' attribute to repeate it.To move the position we use 'background-position' and give the value of x-axis and y-axis where we want to move it.We use'background-attachment' to fix that how it is attached.</li>
+            <li><u>Fonts</u>-The fonts can also be changed by using 'font' attribute and there are many other attribute like 'font-family','font-size','font-weight','font-style','font-transform' etc.</li>
+            <li><u>Text</u>-Many attributes are there for styling the text.Some of them are-'text-decoration','text-align','text-transform', 'vertical-align', 'text-shadow' , 'float' etc.</li>
+            <li><u>Spacing</u>-Space between line ,word ,letter etc can be done by 'line-height' , 'word-spacing','line spacing' </li>
+            <li><u>Overflow</u>-To controll the overflowing content we use different attributes t control it. Some of them are- <br>
+            'overflow' attribute which can be used to controll it. Some of its value are auto,scrool,hiddden etc. The most use iss auto value of overflow.<br>There is another attribute called 'resize' but it is not vry much preferable. <br>For specially horizontal overflow we can use 'word-wrap' attribute and break the word.</li>
+            <li><u>Display property</u>-We can change the element type by using 'display' attribute i.e. from block leveel element to inline-level element and vice versa.It can also set elements to inline-block.</li>
+            <li><u>Hide and Show</u>-We can hide anything in css through 'visibility=hidden;' attribute and 'display=none;' attribute.The both way are same but the visibility attribute will reserve the space but display attribute will not.We can reshow it through javascript.</li>
+            <li><u>Position</u>-We can change the position by 'position' attribute.We have to give the value of position attribute to relative and use the attributes 'top' for sliding to bottom, 'bottom' for top, 'left' for right and 'right' for left</li>
+            <li><u>List,forms</u>-To style them there are many special attribute.Some of them are list-style-type,list-style-position,list-style-image,list-style,border-spacing etc.</li>
+            <li><u>z-index</u>-It is used for giving priority order to the element  which collides with each other.</li>
+        </ul>
+    </p>
+    
+</body>
+</html>
