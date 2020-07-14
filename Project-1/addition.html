@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <link rel="stylesheet" href="addition.css">
+    <script type="text/javascript" src="../javascript/addition.js"></script>
+</head>
+<body>
+    <h1>Playing with two numbers</h1>
+    <form method="POST">
+        <p>
+            <label>X = <input type="text" name="x"></label>
+        </p>
+        <p>
+            <label>Y = <input type="text" name="y"></label>
+        </p>
+        <p>
+            <label>Addition = <input type="text" name="add" id="sum"></label></p>
+        <p>
+            <label>Substraction = <input type="text" name="minus" id="subs"> </label>
+        </p>
+        <p>
+            <label>Multiplication = <input type="text" name="into" id="multi"> </label>
+        </p>
+        <p>
+            <label>Division = <input type="text" name="divide" id="div"> </label>
+        </p>
+        <p>
+            <input type="button" value="Calculate" onclick="addition(form)">
+            <input type="reset" value="reset">
+        </p>
+    </form>
+</body>
+</html>
